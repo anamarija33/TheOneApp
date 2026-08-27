@@ -25,7 +25,7 @@ interface TheOneApi {
 
     companion object {
         const val BASE_URL = "https://the-one-api.dev/v2/"
-        const val BEARER = BuildConfig.API_BEARER
+        val BEARER = BuildConfig.API_BEARER
     }
 
 }
