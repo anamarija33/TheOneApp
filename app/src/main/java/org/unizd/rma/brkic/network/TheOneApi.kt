@@ -1,16 +1,14 @@
 package org.unizd.rma.brkic.network
 
-import androidx.core.os.BuildCompat
-import com.google.gson.internal.GsonBuildConfig
-import okhttp3.Interceptor
-import okhttp3.OkHttpClient
+
 import org.unizd.rma.brkic.BuildConfig
+
+
 import org.unizd.rma.brkic.model.MoviesApiResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
-import retrofit2.http.Query
-import java.util.logging.LoggingPermission
+
 
 
 interface TheOneApi {
