@@ -39,7 +39,7 @@ class MoviesAdapter(
         private val binding: ItemMovieBinding
     ): RecyclerView.ViewHolder(binding.root){
         fun bind(movie: MovieResponse){
-            binding.tvMovieTitle.text = movie.movie.name
+            binding.tvMovieTitle.text = movie.name
             binding.root.setOnClickListener{
                 onMovieClick(movie)
             }

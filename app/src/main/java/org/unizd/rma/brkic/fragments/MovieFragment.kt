@@ -33,7 +33,7 @@ class MovieFragment: Fragment() {
         viewLifecycleOwner.lifecycleScope.launch {
             val response = ApiClient.theOneApi.getMovies()
             if(response.isSuccessful){
-                moviesAdapter.updateMovies(response.body()?:emptyList())
+                moviesAdapter.updateMovies(response.body()?.docs ?: emptyList())
             }
         }
     }
@@ -48,8 +48,8 @@ class MovieFragment: Fragment() {
 
     private fun navigateToMovieDetail(movie: MovieResponse) {
         val bundle = bundleOf(
-            "movieId" to movie.movie.id,
-            "movieName" to movie.movie.name
+            "movieId" to movie.id,
+            "movieName" to movie.name
         )
         findNavController().navigate(R.id.action_movieFragment_to_movieDetailsFragment,bundle)
 
