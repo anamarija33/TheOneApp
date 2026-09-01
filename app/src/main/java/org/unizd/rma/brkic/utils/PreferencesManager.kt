@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import org.unizd.rma.brkic.model.Movie
 import com.google.gson.Gson
-
+//neću radit spremanje, preferences manager mi ne triba za sad
 class PreferencesManager (context: Context){
     private val sharedPreferences: SharedPreferences = context.getSharedPreferences(
         PREFS_NAME,
